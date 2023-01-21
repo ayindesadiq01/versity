@@ -1,0 +1,603 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;700&family=Raleway:wght@400;500;800&family=Roboto+Slab&family=Ubuntu&display=swap');
+* {
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+}
+body {
+ font-family: 'Josefin Sans', sans-serif;
+}
+.homepage {
+ width: 100%;
+ margin: 0 auto;
+ height: 100vh;
+ background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.3)), url("/image/back.jpg");
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ padding: 2em;
+ overflow: hidden;
+}
+.nav-bar {
+ display: flex;
+ justify-content: space-between;
+}
+.logo {
+ width: 100px;
+}
+nav ul {
+ list-style: none;
+ display: flex;
+ color: white;
+}
+
+nav li {
+ margin-right: 1em;
+ margin-top: 1.2em;
+ text-transform: uppercase;
+ cursor: pointer;
+ padding-bottom: 20px;
+}
+nav li::after {
+ content: '';
+ margin: auto;
+ display: block;
+ width: 0%;
+ height: 2px;
+ background:red;
+ transition: 0.5s;
+}
+nav li:hover::after {
+ width: 100%;
+}
+nav a {
+ font-weight: 800;
+}
+
+.homepage-text {
+ width: 100%;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ text-align: center;
+ color: white;
+ text-shadow: 50px grey;
+}
+.homepage-text h1 {
+ font-size: 3.2rem;
+ margin-bottom: .5em;
+ text-shadow: 0px 0px 10px black;
+}
+.homepage-text p {
+ font-size: 1rem;
+ margin-bottom: 3em;
+ text-shadow: 0px 0px 2px grey;
+}
+.homepage-text a {
+ text-decoration: none;
+ color: white;
+ padding: .5em 0em;
+ border: 2px solid white;
+ border-radius: 3px;
+ font-size: 1.2rem;
+ transition: .5s;
+}
+.homepage-text a::before {
+ content: '';
+ display: inline-block;
+ position: relative;
+ top: -5px;
+ left: -45px;
+ width: 35px;
+ height: 2px;
+ background-color: white;
+ transition: .5s;
+}
+.homepage-text a::after {
+ content: '';
+ display: inline-block;
+ position: relative;
+ top: -5px;
+ left: 45px;
+ width: 35px;
+ height: 2px;
+ background-color: white;
+ transition: .5s;
+}
+.homepage-text a:hover::before, .homepage-text a:hover::after {
+ background-color: red;
+}
+.homepage-text a:hover {
+ background-color: red;
+ border: 2px solid red;
+}
+
+.bar {
+    width: 20px;
+    cursor: pointer;
+}
+.bar-a {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: relative;
+    top: 10px;
+}
+@media (min-width:766px) {
+    .bar-a {
+        display: none;
+    }
+}
+
+@media (max-width: 765px) {
+ .homepage {
+  overflow: hidden;
+ }
+ .hopmpage-text {
+  width: 80%;
+  z-index: -1;
+ }
+ .homepage-text h1 {
+  font-size: 2rem;
+  text-shadow: 0px 0px 10px black;
+ }
+  .homepage-text p {
+     font-size: 1.1rem;
+     text-shadow: 0px 0px 10px black;
+    }
+
+    .ani-side {
+        height: 100vh;
+        background-color: blanchedalmond;
+        z-index: 1;
+        width: 50%;
+        padding: 20px;
+        position: relative;
+        transition: .5s;
+    }
+    .hidden {
+        display: none;
+    }
+    nav ul {
+        flex-direction: column;
+        color: black;
+        font-weight: 600;
+    }
+    .nav-bar {
+        position: relative;
+    }
+    .user {
+        position: absolute;
+        left: 380px;
+        transition: .5s;
+    }
+
+}
+
+/* COURSE */
+.courses {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    /* padding-top: 5em; */
+}
+.courses h1 {
+    margin-top: 3em;
+    margin-bottom: .6em;
+    font-size: 2.1rem;
+}
+.courses > p {
+    padding-bottom: 3em;
+}
+.course-level {
+    display: flex;
+    justify-content: space-between;
+}
+.level-col {
+    width: 31%;
+    background-color: rgb(226, 223, 183);
+    padding: 1.1em .8em;
+    border-radius: 7px;
+    transition: 1s;
+}
+.level-col:hover {
+    /* color: red; */
+    background-color: burlywood;
+    box-shadow: 0px 0px 50px rgb(190, 190, 190);
+}
+.level-col:hover:nth-child(2) {
+    background-color: rgb(240, 141, 70);
+}
+.level-col:hover:nth-child(3) {
+    background-color:cornflowerblue;
+}
+.level-col h3 {
+    margin-bottom: .7em;
+}
+.level-col p {
+    font-size: 1.1rem;
+}
+@media (max-width: 765px) {
+    .course-level {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .level-col {
+        width: 90%;
+        margin-bottom: 2em;
+    }
+}
+
+/* CAMPUS */
+.campus {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    /* padding-top: 5em; */
+}
+.campus h1 {
+    margin-top: 3em;
+    margin-bottom: .6em;
+    font-size: 2.1rem;
+}
+
+.campus > p {
+    padding-bottom: 3em;
+}
+.campus-img {
+    display: flex;
+    justify-content: space-between;
+
+}
+.campusImage {
+    width: 31%;
+    position: relative;
+    
+}
+.campusImage > img {
+    width: 100%;
+    height:500px;
+    object-fit: cover;
+    border-radius: 7px;
+    margin-bottom: 4em;
+}
+.layer {
+    background: none;
+    height: 500px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 7px;
+    transition: .7s;
+}
+
+.campusImage .layer:hover{
+    background-color: rgba(247, 183, 137, 0.7);
+    color: white;
+}
+.layer p {
+    font-weight: 600;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@media (max-width: 765px) {
+    .campus-img {
+        flex-direction: column;
+    }
+    .campusImage {
+        width: 100%;
+    }
+}
+
+/* SCHOLARSHIP */
+.scholarship {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: beige;
+    padding: 2em;
+    margin-top: 5em 0em;
+}
+.scholarship:hover {
+    box-shadow: 5px 7px rgb(204, 200, 200);
+}
+.scholarship h1 {
+    margin-bottom: .6em;
+    font-size: 2.1rem;
+}
+.scholarship > p {
+    padding-bottom: 3em;
+}
+.scheme {
+    display: flex;
+    justify-content: space-around;
+}
+.school-message {
+    width: 55%;
+    text-align: left;
+    position: relative;
+}
+.school-message h2 {
+    margin-bottom: 1em;
+}
+.school-message > p {
+    line-height: 1.4;
+    /* margin-bottom: 1em; */
+}
+.apply {
+    text-decoration: none;
+    background-color: cornflowerblue;
+    font-weight: 600;
+    padding: .7em 1em;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    transition: 1s;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;border-top-right-radius: 10px;
+}
+.apply:hover {
+    font-size: 1.1rem;
+    box-shadow: 5px 7px black;
+}
+.black-girl {
+    width: 40%;
+    height: 400px;
+    object-fit: cover;
+}
+.fa-solid {
+    margin-left: 10px;
+    display:none;
+}
+@media (max-width: 765px) {
+    .scholarship {
+        width: 100%;
+        background-color: white;
+        box-shadow: none;
+        margin-top: 0em;
+    }
+    .scholarship h1 {
+        padding-top: 1em;
+        font-size: 1.7rem;
+    }
+    .scheme {
+        flex-direction: column;
+    }
+    .school-message {
+        width: 100%;
+        text-align: center;
+    }
+    .black-girl {
+        width: 100%;
+        height: 400px;
+        margin-bottom: 1em;
+    }
+    .apply {
+        position: relative;
+    }
+
+}
+
+/* FACILITIES */
+.facilities {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 5em;
+}
+.facilities-info {
+    display: flex;
+    justify-content: space-between;
+
+}
+.facilities h1 {
+    margin-top: 3em;
+    margin-bottom: .6em;
+    font-size: 2.1rem;
+}
+
+.facilities >p {
+    padding-bottom: 3em;
+}
+.info-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.info-col {
+    width: 31%;
+}
+.info-details {
+    text-align: left;
+}
+.info-details h3 {
+    margin: .5em 0;
+}
+.info-details p {
+    color: grey;
+}
+@media (max-width: 765px) {
+    /* .facilities {
+        width: 100%;
+    } */
+    .facilities-info {
+        flex-direction: column;
+    }
+    .info-col {
+        width: 100%;
+    }
+    .info-details {
+        text-align: center;
+    }
+    .info-details p {
+        margin-bottom: 1.5em;
+    }
+}
+
+/* STUDENTS COMMENTS */
+.student-comments {
+    width: 100%;
+    background-color: rgb(176, 196, 216);
+}
+.comment {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: white;
+}
+.comment h1 {
+    margin-top: 3em;
+    margin-bottom: .6em;
+    font-size: 2.1rem;
+    padding-top: 2em;
+}
+
+.comment > p {
+    padding-bottom: 3em;
+}
+.student-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.student-review {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 4em;
+    padding-left: 2em;
+    padding-right: 2em;
+    margin-bottom: 4em;
+}
+.first-student {
+    display: flex;
+    width: 48%;
+    background-color: rgb(168, 233, 233);
+    padding: 1.2em;
+    border-radius: 10px;
+}
+.stu-comm {
+    text-align: left;
+    margin-left: 20px;
+    
+}
+.stu-comm p {
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+.stars {
+    width: 100%;
+    margin-top: 5px;
+    position: relative;
+    left: -5px;
+}
+
+@media (max-width: 765px) {
+    .comment {
+        width: 100%;
+    }
+    .student-review {
+        flex-direction: column;
+    }
+    .first-student {
+        width: 100%;
+        margin-bottom: 2em;
+       padding-top: 3em;
+        padding-bottom: 3em;
+    }
+}
+
+/* ENROL */
+.enrol {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/image/group\ student\ pics.jpg");
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    background-size: cover;
+    padding: 5em;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 10em;
+}
+.enrol h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1em;
+}
+.contact {
+    text-decoration: none;
+    color: white;
+    padding: .8em 0em;
+    border: 2px solid white;
+    border-radius: 3px;
+    font-size: 1rem;
+    transition: .5s;
+}
+
+.contact::before {
+    content: '';
+    display: inline-block;
+    position: relative;
+    top: -5px;
+    left: -45px;
+    width: 35px;
+    height: 2px;
+    background-color: white;
+    transition: .5s;
+}
+
+.contact::after {
+    content: '';
+    display: inline-block;
+    position: relative;
+    top: -5px;
+    left: 45px;
+    width: 35px;
+    height: 2px;
+    background-color: white;
+    transition: .5s;
+}
+
+.contact:hover::before,
+.contact:hover::after {
+    background-color: red;
+}
+
+.contact:hover {
+    background-color: red;
+    border: 2px solid red;
+}
+@media (max-width: 765px) {
+    .enrol h2 {
+        font-size: 1.2rem;
+        margin-bottom: 1.5em;
+    }
+    .contact {
+        font-size: .8rem;
+    padding: .5em -10em;
+    }
+}
+
+/* SOCIAL LINK */
+.about-us {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+.about-us h3, p {
+    margin-bottom: 2em;
+    cursor: pointer;
+}
+.link {
+    margin-right: 1em;
+    cursor: pointer;
+}
+.link:hover {
+    color: gold;
+}
