@@ -11,7 +11,7 @@ body {
  width: 100%;
  margin: 0 auto;
  height: 100vh;
- background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.3)), url("/image/back.jpg");
+ background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.3)), url("./image/back.jpg");
  background-position: center;
  background-repeat: no-repeat;
  background-size: cover;
@@ -517,7 +517,7 @@ nav a {
     width: 80%;
     margin: 0 auto;
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/image/group\ student\ pics.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("./image/group\ student\ pics.jpg");
     background-repeat: no-repeat;
     /* background-position: center; */
     background-size: cover;
