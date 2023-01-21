@@ -168,7 +168,7 @@ nav a {
         position: relative;
     }
     .user {
-        position: absolute;
+        position: relative;
         left: 380px;
         transition: .5s;
     }
