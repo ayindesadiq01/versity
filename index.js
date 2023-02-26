@@ -9,6 +9,6 @@ user.addEventListener('click', function(){
  side.classList.remove('hidden');
 });
 arrow.addEventListener ('click', function(){
- side.classList.add('hidden');
+ side.classList.toggle('hidden');
 })
 
